@@ -1,0 +1,33 @@
+@use "../utils/variables" as *
+
+// For the header component ...
+
+// Global header properties 
+header
+    margin: 45px
+    margin-left: 5%
+    margin-right: 5%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    .logoKasa
+        @media ( max-width:$mobileStyle)
+            width: 145px
+    //Navbar part of the file
+    .navbar
+        display: flex
+        gap: 55px
+        @media ( max-width:$mobileStyle  )
+            gap: 20px
+        .navbar__link
+            text-decoration: none
+            font-size: 28px
+            @media ( max-width:$mobileStyle )
+                font-size: 16px
+            &--active
+                text-decoration: underline
+        .navbar__link:visited
+            color: $primaryTextColor
+        .navbar__link:hover
+            text-decoration: underline

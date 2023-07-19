@@ -1,0 +1,32 @@
+@use '../utils/_mixins' as *
+@use '../utils/variables' as *
+
+/* Banner on the top of the pages Home and About with differents pictures and texts */
+.banner
+    display: flex
+    align-items: center
+    justify-content: center
+.bannerContainer
+    @include marginContainers        
+    height: 223px
+    width: 100%
+    border-radius: 25px
+    display: flex
+    align-items: center
+    justify-content: center
+    @media ( max-width: $mobileStyle)
+        padding: 16px
+        height: 110px
+        margin-bottom: -10px
+.bannerContainer__home
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../../img/image_slider_1.png")
+    background-position: center
+.bannerContainer__about
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../../img/image_slider_2.png")
+    background-position: center
+    @media (max-width: $mobileStyle)
+        height: 220px
+.bannerTitle
+    color: white
+    @media (max-width: $mobileStyle)
+        font-size: 24px

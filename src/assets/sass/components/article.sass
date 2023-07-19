@@ -1,0 +1,66 @@
+@use '../utils/_variables' as *
+
+/* Article for display the rental logments */
+.articleLocation
+    margin: 45px
+    margin-left: 5%
+    margin-right: 5%
+    padding-top: 50px
+    padding-bottom: 50px
+    width: 90%
+    background-color: #F6F6F6
+    border-radius: 25px
+    display: flex
+    align-items: center
+    justify-content: center
+    @media (max-width: $mobileStyle)
+        background-color: white
+        padding-top: 0
+        padding-bottom: 0
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 40px
+        @media (max-width: 1230px)
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+        @media (max-width: $mobileStyle)
+            grid-template-columns: 1fr
+            
+/* Cards of differents rental logments */   
+.linkLocation
+    text-decoration: none 
+.locCard
+    width: 340px
+    height: 340px
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    @media (max-width: $mobileStyle)
+        height: 250px
+    .locCard__img
+        width: 340px
+        height: 340px
+        object-fit: cover
+        border-radius: 10px   
+        @media (max-width: $mobileStyle)
+            height: 250px
+    .locCard__title
+        position: absolute
+        color: white
+        margin: 0
+        height: 75px
+        width: 332px
+        border-radius: 10px
+        padding-top: 55px
+        margin-top: 210px
+        padding-left: 8px
+        display: flex
+        align-items: center
+        text-decoration: none
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
+        @media (max-width: $mobileStyle)
+            margin-top:120px
+        
+        
+        

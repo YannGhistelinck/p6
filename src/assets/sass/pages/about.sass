@@ -1,0 +1,13 @@
+@use '../utils/_variables' as *
+
+// Box who contain the four menus of the page "About"
+.topicContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 35px
+    margin: 5%
+    width: 90%
+    @media (max-width: $mobileStyle)
+        margin-top: 25px
+        gap: 20px

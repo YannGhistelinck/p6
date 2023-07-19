@@ -1,0 +1,33 @@
+@use "../utils/variables" as *
+    
+// All properties of the Error page
+    
+.errorPage
+    color : $primaryTextColor
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    gap : 100px
+    @media (max-width: $mobileStyle)
+        margin: 5%
+        gap: 70px
+    .errorPage__title
+        font-size: 280px
+        margin: 0
+        padding: 0
+        @media (max-width: $mobileStyle)
+            font-size: 96px
+    .errorPage__sentence
+        font-size: 30px
+        margin: 0
+        text-align: center
+        @media (max-width: $mobileStyle)
+            font-size: 18px
+            width: 260px
+    .errorPage__link
+        margin-bottom : 50px
+        @media (max-width: $mobileStyle)
+            font-size: 14px
+    .errorPage__link:visited
+        color: $primaryTextColor
