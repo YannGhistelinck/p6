@@ -5,6 +5,7 @@
 
 .menu // Global size of the scrolling menu
     width: 90%
+    margin-bottom: 25px
     @media (max-width: $mobileStyle)
         width: 100%
     &__title // title of the scrolling menu
@@ -34,13 +35,32 @@
     &__description // description inside the scrolling menu
         background: #F6F6F6
         padding: 20px
+        padding-top: 12px
+        margin-bottom: -40px
         color: $primaryTextColor
         border-radius: 0 0 5px 5px
-        transition: 0.75s ease-out // transition of inside menu on opening
+        transition: 0.75s ease-in-out// transition of inside menu on opening
         @media (max-width: $mobileStyle)
             font-size: 12px
         &--hidden // To hide the inside of the scrolling menu
-            opacity: 0
-            padding: 0
-            height: 0
+            padding-top: 0
+            padding-bottom: 0
+            transition : 0.75s ease-out 0.1s
+            background-color: rgba(246, 246, 246, 0)
+        &__content
+            transition: 0.3s ease-out 0.2s
+            margin-top: 0
+            margin-bottom: 0
+            padding-top: 0
+            background-color: rgba(246, 246, 246, 0)
+            width: 98%
+            &--hidden
+                padding-bottom: 0
+                margin-top: -20%
+                height: 0
+                opacity: 0
+                transition: 0.3s ease-out 
+            &--list
+                padding-top: 0
+                width: 85%
         
